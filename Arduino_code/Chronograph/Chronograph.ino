@@ -47,8 +47,10 @@ void setup() {
 }
 
 void loop() {
-  
-  
+  /*lcd.setCursor(0,4); // code for adjusting the photo interruptors
+  lcd.print(digitalRead(2));
+  lcd.print(digitalRead(3));
+  */
   while(started == 0){};
   
   lcd.clear();
@@ -79,7 +81,7 @@ void loop() {
   
   if(measured == 1)
   {
-      v0 = 125000. / deltat;
+      v0 = 50000. / deltat;
       E0=.5*mbb*v0*v0;
       lcd.print("****************");
       lcd.setCursor(0,1);
@@ -119,6 +121,7 @@ void loop() {
   //lcd.setCursor(0, 1);
   // print the number of seconds since reset:
   //lcd.print(millis()/1000);
+  
 }
 
 void starttimer() {
